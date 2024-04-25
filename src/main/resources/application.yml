@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/csc?useSSL=false
+    username: root
+    password:
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        jdbc:
+          batch-size: 50
+          order_inserts: true
+    hibernate:
+      ddl-auto: update
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+host: http://localhost:8082
+
+jwt:
+  secret: javainuse
+server:
+  port: 8082
